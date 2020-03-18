@@ -1,0 +1,31 @@
+label {
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.5);
+  cursor: pointer;
+}
+
+/* to hide the checkbox itself */
+input[type="checkbox"] {
+  display: none;
+} 
+
+input[type="checkbox"] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+}
+
+/* unchecked icon */
+input[type="checkbox"] + label:before {
+  content: "\f096";
+  color: rgba(31, 32, 65, 0.25);
+  //border-radius: 4px;
+} 
+
+input[type="checkbox"] + label:before {
+  letter-spacing: 10px;
+} /* space between checkbox and label */
+
+input[type="checkbox"]:checked + label:before {
+  content: "\f046";
+  color: #BC9CFF;
+} /* checked icon */

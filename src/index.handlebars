@@ -1,21 +1,63 @@
 <!doctype html>
 <html lang="en-US">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{htmlWebpackPlugin.options.title}}</title>
-    <!--[if lt IE 9]>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,
+            shrink-to-fit=no">
+        <script src="https://kit.fontawesome.com/b30a064eb8.js"
+            crossorigin="anonymous"></script>
+        <title>{{htmlWebpackPlugin.options.title}}</title>
+        <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-</head>
-<body>
-    <div class="wrapper">
-        <div class="content">
-            {{> header/header }} 
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content">
+                {{> header/header }}
+            </div>
+            <input type="email" id="email" placeholder="Email"
+                class="input-default" required>
+
+
+            <p>Choose your features:</p>
+
+            <div>
+                <div>
+                    <input id="box1" type="checkbox" />
+                    <label for="box1">Можно курить</label></div>
+                <div><input id="box2" type="checkbox" />
+                    <label for="box2">Можно с животными</label></div>
+            </div>
+
+            <div class="radio-buttons">
+                <label class="container">Мужчина
+                    <input name="gender" type="checkbox"
+                        checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="container">Женщина
+                    <input name="gender" type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <div class="toggle">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <span class="labelRound">Hello hello hello</span>
+
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <span class="labelRound">Bye bye bye</span>
+            </div>
         </div>
-	<h5>Tri</h5>
-    </div>
-</body>
+    </body>
 </html>

@@ -1,0 +1,19 @@
+@mixin hover-state {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+input {
+  background: #ffffff;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  outline: none;
+
+  @include hover-state {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    color: rgba(31, 32, 65, 0.75);
+  }
+}

@@ -1,5 +1,9 @@
-@import 'header/header.scss';
+@import "header/header.scss";
+@import "elements/entry-field/text-field/input-default.scss";
+@import "elements/buttons/checkbox.scss";
+@import "elements/buttons/radio-buttons.scss";
+@import "elements/buttons/toggle.scss";
 
 h3 {
-	color: red;
+  color: red;
 }
