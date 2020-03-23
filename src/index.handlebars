@@ -1,63 +1,90 @@
 <!doctype html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1,
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
             shrink-to-fit=no">
-        <script src="https://kit.fontawesome.com/b30a064eb8.js"
-            crossorigin="anonymous"></script>
-        <title>{{htmlWebpackPlugin.options.title}}</title>
-        <!--[if lt IE 9]>
+    <script src="https://kit.fontawesome.com/b30a064eb8.js" crossorigin="anonymous"></script>
+    <script src="elements/buttons/likeButtons/like-buttons.js"></script>
+    <title>{{htmlWebpackPlugin.options.title}}</title>
+    <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    </head>
-    <body>
-        <div class="wrapper">
-            <div class="content">
-                {{> header/header }}
-            </div>
-            <input type="email" id="email" placeholder="Email"
-                class="input-default" required>
+</head>
 
+<body>
+    <div class="wrapper">
+        <div class="content">
+            {{> header/header }}
+        </div>
+        <input type="email" id="email" placeholder="Email" class="input-default" required>
+    </div>
+    <div class="checkboxes">
+        <p>Choose your features:</p>
 
-            <p>Choose your features:</p>
-
+        <div>
             <div>
-                <div>
-                    <input id="box1" type="checkbox" />
-                    <label for="box1">Можно курить</label></div>
-                <div><input id="box2" type="checkbox" />
-                    <label for="box2">Можно с животными</label></div>
+                <input id="box1" type="checkbox" />
+                <label for="box1">Можно курить</label>
             </div>
-
-            <div class="radio-buttons">
-                <label class="container">Мужчина
-                    <input name="gender" type="checkbox"
-                        checked="checked">
-                    <span class="checkmark"></span>
-                </label>
-
-                <label class="container">Женщина
-                    <input name="gender" type="checkbox">
-                    <span class="checkmark"></span>
-                </label>
-            </div>
-
-            <div class="toggle">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-                <span class="labelRound">Hello hello hello</span>
-
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-                <span class="labelRound">Bye bye bye</span>
+            <div>
+                <input id="box2" type="checkbox" />
+                <label for="box2">Можно с животными</label>
             </div>
         </div>
-    </body>
+    </div>
+
+    <div class="container">
+        <ul>
+            <li>
+                <input type="radio" id="f-option" name="selector">
+                <label for="f-option">Мужчина</label>
+
+                <div class="check"></div>
+            </li>
+
+            <li>
+                <input type="radio" id="s-option" name="selector">
+                <label for="s-option">Женщина</label>
+
+                <div class="check">
+                    <div class="inside"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="toggle">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <span class="labelRound">Hello hello hello</span>
+
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <span class="labelRound">Bye bye bye</span>
+    </div>
+
+    <div class="container">
+        <div class="like-buttons">
+            <button class="like__btn">
+                <i class="far fa-heart"></i>
+                <span class="like__number">2</span>
+            </button>
+
+            <button class="like__btn__checked">
+                <i class="fas fa-heart checked"></i>
+                <span class="like__number__checked">12</span>
+            </button>
+        </div>
+    </div>
+    </div>
+</body>
+
 </html>

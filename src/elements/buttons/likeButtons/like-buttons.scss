@@ -1,0 +1,40 @@
+.like__btn {
+  color: rgba(31, 32, 65, 0.25);
+  border-color: rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+  max-width: 200px;
+  display: inline-block;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    color: #bc9cff;
+    border-color: #bc9cff;
+  }
+}
+
+.like__number {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.like__btn__checked {
+  color: #bc9cff;
+  border-color: #bc9cff;
+  border-radius: 10px;
+  max-width: 200px;
+  display: inline-block;
+  align-items: center;
+  cursor: pointer;
+}
+
+.like__number__checked {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+}
