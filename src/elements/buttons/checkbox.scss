@@ -1,83 +1,61 @@
-.container {
-  display: block;
-  position: relative;
-  height: auto;
-  //margin: 40px auto;
-  //width: 500px;
-  //padding: 20px;
-}
+.styled-checkbox {  // take and hide it
+  position: absolute; 
+  opacity: 0;
 
-.container ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  overflow: auto; //управляет отображением содержания блочного элемента
-}
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
 
-ul li {
-  color: rgba(31, 32, 65, 0.5);
-  display: block;
-  position: relative;
-  float: left;
-}
+  // Box.
+  & + label:before {
+    content: "";
+    margin-right: 10px;
+    margin-left: -30px; //только для демо версии
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+  }
 
-ul li input[type="radio"] {
-  position: absolute;
-  visibility: hidden;
-}
+  // Box hover
+  &:hover + label:before {
+    border-color: #bc9cff;
+  }
 
-ul li label {
-  display: block;
-  position: relative;
-  font-weight: 300;
-  font-size: 1.35em;
-  padding: 25px 25px 25px 80px;
-  margin: 10px auto;
-  height: 30px;
-  z-index: 9;
-  cursor: pointer;
-}
+  // Box checked
+  &:checked + label:before {
+    background: #fff;
+    border-color: #bc9cff;
+  }
 
-ul li:hover label {
-  color: rgba(31, 32, 65, 0.75);
-}
+  // Disabled state label
+  &:disabled + label {
+    color: rgba(31, 32, 65, 0.5);
+    cursor: pointer;
+  }
 
-ul li .check {
-  display: block;
-  position: absolute;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 100%;
-  height: 20px;
-  width: 20px;
-  top: 35px;
-  left: 45px;
-  z-index: 5;
-}
+  // Disabled box
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
 
-ul li:hover .check {
-  border: 1px solid #bc9cff;
-}
-
-ul li .check::before {
-  display: block;
-  position: absolute;
-  content: "";
-  border-radius: 100%;
-  height: 12px;
-  width: 12px;
-  top: 4px;
-  left: 4px;
-  margin: auto;
-}
-
-input[type="radio"]:checked ~ .check {
-  border: 1px solid #bc9cff;
-}
-
-input[type="radio"]:checked ~ .check::before {
-  background: #bc9cff;
-}
-
-input[type="radio"]:checked ~ label {
-  color: rgba(31, 32, 65, 0.75);
+  // Checkmark
+  &:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    background: #bc9cff;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 #bc9cff, 4px 0 0 #bc9cff, 4px -2px 0 #bc9cff,
+      4px -4px 0 #bc9cff, 4px -6px 0 #bc9cff, 4px -8px 0 #bc9cff;
+    transform: rotate(45deg);
+  }
 }

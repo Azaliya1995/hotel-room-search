@@ -1,60 +1,80 @@
 .container {
-  display: inline-block;
+  display: block;
   position: relative;
-  padding-left: 30px;
-  padding-top: 2px;
-  font-size: 14px;
-  margin-right: 20px;
-  margin-top: 31px;
-  cursor: pointer;
-  //margin-bottom: 12px;
-  //-webkit-user-select: none;
-  //-moz-user-select: none;
-  //-ms-user-select: none;
-  //user-select: none;
+  height: auto;
 }
 
-.checkmark {
+.container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto; //управляет отображением содержания блочного элемента
+}
+
+ul li {
+  color: rgba(31, 32, 65, 0.5);
+  display: block;
+  position: relative;
+  float: left;
+}
+
+ul li input[type="radio"] {
   position: absolute;
-  top: 0;
-  left: 0;
+  visibility: hidden;
+}
+
+ul li label {
+  display: block;
+  position: relative;
+  font-weight: 300;
+  font-size: 1.35em;
+  padding: 25px 25px 25px 80px;
+  margin: 10px auto;
+  height: 30px;
+  z-index: 9;
+  cursor: pointer;
+}
+
+ul li:hover label {
+  color: rgba(31, 32, 65, 0.75);
+}
+
+ul li .check {
+  display: block;
+  position: absolute;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 100%;
   height: 20px;
   width: 20px;
-  background-color: #fff;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 50%;
+  top: 35px;
+  left: 45px;
+  z-index: 5;
 }
 
-/* On mouse-over, add a grey background color 
-.container:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
-  */
-
-/* When the radio button is checked, add a white background and purple border */
-.container input:checked ~ .checkmark {
-  background-color: #ffffff;
+ul li:hover .check {
   border: 1px solid #bc9cff;
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
+ul li .check::before {
   display: block;
-}
-
-/* Style the indicator (dot/circle) */
-.container .checkmark:after {
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  height: 12px;
+  width: 12px;
   top: 4px;
   left: 4px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+  margin: auto;
+}
+
+input[type="radio"]:checked ~ .check {
+  border: 1px solid #bc9cff;
+}
+
+input[type="radio"]:checked ~ .check::before {
   background: #bc9cff;
+}
+
+input[type="radio"]:checked ~ label {
+  color: rgba(31, 32, 65, 0.75);
 }
