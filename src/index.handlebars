@@ -1,85 +1,124 @@
 <!doctype html>
 <html lang="en-US">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1,
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,
             shrink-to-fit=no">
-    <script src="https://kit.fontawesome.com/b30a064eb8.js" crossorigin="anonymous"></script>
-    <script src="elements/buttons/likeButtons/like-buttons.js"></script>
-    <title>{{htmlWebpackPlugin.options.title}}</title>
-    <!--[if lt IE 9]>
+        <script src="https://kit.fontawesome.com/b30a064eb8.js"
+            crossorigin="anonymous"></script>
+        <title>{{htmlWebpackPlugin.options.title}}</title>
+        <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-</head>
+    </head>
 
-<body>
-    <div class="wrapper">
-        <div class="content">
-            {{> header/header }}
+    <body>
+        <div class="wrapper">
+            <div class="content">
+                {{> header/header }}
+            </div>
+            <input type="email" id="email" placeholder="Email"
+                class="input-default" required>
         </div>
-        <input type="email" id="email" placeholder="Email" class="input-default" required>
-    </div>
 
-    <div class="checkboxes">
-    <ul class="unstyled centered">
-  <li>
-      <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
-    <label for="styled-checkbox-1">Можно курить</label>
-  </li>
-  </ul>
-    </div>
+        <div class="checkboxes">
+            <ul class="unstyled centered">
+                <li>
+                    <input class="styled-checkbox" id="styled-checkbox-1"
+                        type="checkbox" value="value1">
+                    <label for="styled-checkbox-1">Можно курить</label>
+                </li>
+            </ul>
+        </div>
 
-    <div class="container">
-        <ul>
-            <li>
-                <input type="radio" id="f-option" name="selector">
-                <label for="f-option">Мужчина</label>
+        <div class="container">
+            <ul>
+                <li>
+                    <input type="radio" id="f-option" name="selector">
+                    <label for="f-option">Мужчина</label>
 
-                <div class="check"></div>
-            </li>
+                    <div class="check"></div>
+                </li>
 
-            <li>
-                <input type="radio" id="s-option" name="selector">
-                <label for="s-option">Женщина</label>
+                <li>
+                    <input type="radio" id="s-option" name="selector">
+                    <label for="s-option">Женщина</label>
 
-                <div class="check">
-                    <div class="inside"></div>
+                    <div class="check">
+                        <div class="inside"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="toggle">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="labelRound">Hello hello hello</span>
+
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="labelRound">Bye bye bye</span>
+        </div>
+
+        <div class="container">
+            <div class="like-buttons">
+                <button class="like__btn">
+                    <i class="far fa-heart"></i>
+                    <span class="like__number">2</span>
+                </button>
+
+                <button class="like__btn__checked">
+                    <i class="fas fa-heart checked"></i>
+                    <span class="like__number__checked">12</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="rating">
+            <h3>Rate</h3>
+            <div class="rating left">
+                <div class="stars right">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
                 </div>
-            </li>
-        </ul>
-    </div>
-
-    <div class="toggle">
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-        </label>
-        <span class="labelRound">Hello hello hello</span>
-
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-        </label>
-        <span class="labelRound">Bye bye bye</span>
-    </div>
-
-    <div class="container">
-        <div class="like-buttons">
-            <button class="like__btn">
-                <i class="far fa-heart"></i>
-                <span class="like__number">2</span>
-            </button>
-
-            <button class="like__btn__checked">
-                <i class="fas fa-heart checked"></i>
-                <span class="like__number__checked">12</span>
-            </button>
+            </div>
         </div>
-    </div>
-    </div>
-</body>
+
+        <div class="standart-buttons">
+            <a href="#" class="knopka purple-btn colorful"><span
+                    class="btn-standart">Click me</span></a>
+            <a href="#" class="knopka purple-btn-light"><span
+                    class="btn-standart">Click me</span></a>
+            <a href="#" class="knopka white-btn colorful-border"><span
+                    class="btn-standart">Click me</span></a>
+        </div>
+
+        <div class="outer-opacity-border">
+            <div class="inner transparent-border">
+                <span class="transparent-span">click me</span>
+            </div>
+        </div>
+
+        <div class="button-links">
+            <a href="#" class="button-link colorful-link">click me</a>
+            <a href="#" class="button-link grey-link">click me</a>
+        </div>
+
+        <div class="standart-buttons">
+            <a href="#" class="link-button right-arrow">перейти к оплате<i class="fas fa-arrow-right"></i></a>
+        </div>
+
+    </body>
 
 </html>

@@ -1,9 +1,13 @@
 @import "header/header.scss";
 @import "elements/entry-field/text-field/input-default.scss";
-@import "elements/buttons/checkbox.scss";
-@import "elements/buttons/radio-buttons.scss";
-@import "elements/buttons/toggle.scss";
-@import "elements/buttons/likeButtons/like-buttons.scss";
+@import "elements/chexboxes/checkbox.scss";
+@import "elements/chexboxes/radio-buttons.scss";
+@import "elements/chexboxes/toggle.scss";
+@import "elements/rate/like-buttons.scss";
+@import "elements/rate/rate-stars.scss";
+@import "elements/buttons/standart-buttons.scss";
+@import "elements/buttons/buttons-link.scss";
+@import "elements/buttons/standart-button-long.scss";
 
 h3 {
   color: red;
